@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * @category  Syncit Group Elastic Search Indexer
+ * @package   SyncitGroup_Indexer
+ * @copyright Copyright (c) 2021 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd"> 
+    <indexer id="syncitgroup_sgindexer_indexer" view_id="syncitgroup_sgindexer_indexer" class="SyncitGroup\Indexer\Model\Price">
+        <title translate="true">SyncitGroup Elasticsearch Price Indexer</title>
+        <description translate="true">SyncitGroup Elasticsearch Price Indexer</description>
+    </indexer>
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Syncit Group Elastic Search Indexer
+ * @package   SyncitGroup_Indexer
+ * @copyright Copyright (c) 2021 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="SyncitGroup_Indexer::sgindexergroupindexer" title="SG Indexer" module="SyncitGroup_Indexer" sortOrder="51" resource="SyncitGroup_Indexer::sgindexer"/>
+
+		<add id="SyncitGroup_Indexer::sgindexer" title="Indexer" module="SyncitGroup_Indexer" 
+				sortOrder="10" action="sgindexer/elasticsearch/indexers" resource="SyncitGroup_Indexer::sgindexer" 
+				parent="SyncitGroup_Indexer::sgindexergroupindexer"/>
+
+    </menu>
+</config>
+

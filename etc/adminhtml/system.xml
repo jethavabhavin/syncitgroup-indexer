@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  Syncit Group Elastic Search Indexer
+ * @package   SyncitGroup_Indexer
+ * @copyright Copyright (c) 2021 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="syncitgroup" translate="label" sortOrder="10">
+			<label>Syncit Group</label>
+		</tab>
+		<section id="sgelasticsearchindexer" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+			<label>Syncit Group Elastic Search Indexer</label>
+			<tab>syncitgroup</tab>
+			<resource>SyncitGroup_Indexer::sgindexerconfig</resource>
+			<group id="indexer" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+				<label>General</label>
+				<field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Enable SG Elastic Search Indexer</label>
+					<source_model>SyncitGroup\SgForm\Model\Source\StatusExtention</source_model>
+					<comment>
+						`Enable SG Contact Form`
+					</comment>
+				</field>
+				<!-- Elasticsearch 7.x -->
+                <field id="elasticsearch7_server_hostname" translate="label" type="text" sortOrder="61" showInDefault="1">
+                    <label>Elasticsearch Server Hostname</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="elasticsearch7_server_port" translate="label" type="text" sortOrder="62" showInDefault="1">
+                    <label>Elasticsearch Server Port</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="elasticsearch7_index_prefix" translate="label" type="text" sortOrder="63" showInDefault="1">
+                    <label>Elasticsearch Index Prefix</label>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+                <field id="elasticsearch7_status" translate="button_label" sortOrder="68" showInDefault="1">
+                    <label/>
+                    <button_label>Check Status</button_label>
+                    <frontend_model>SyncitGroup\Indexer\Block\Adminhtml\System\Config\CheckStatus</frontend_model>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+		</section>
+	</system>
+</config>

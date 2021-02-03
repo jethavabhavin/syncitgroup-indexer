@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+ /**
+ * @category  Syncit Group Elastic Search Indexer
+ * @package   SyncitGroup_Indexer
+ * @copyright Copyright (c) 2021 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <sgelasticsearchindexer>
+            <indexer>
+                <enable>0</enable>
+                <elasticsearch7_server_hostname>localhost</elasticsearch7_server_hostname>
+                <elasticsearch7_server_port>9200</elasticsearch7_server_port>
+                <elasticsearch7_index_prefix>elastic_ultimate</elasticsearch7_index_prefix>
+            </indexer>				
+        </sgelasticsearchindexer>
+    </default>
+</config>
