@@ -1,0 +1,16 @@
+<?php
+/**
+ * @category  Syncit Group Elastic Search Indexer
+ * @package   SyncitGroup_Indexer
+ * @copyright Copyright (c) 2021 Bhavin
+ * @author    Bhavin
+ */
+?>
+<button class="scalable" type="button" id="<?= $block->getHtmlId() ?>" data-mage-init='{"checkstatus":{
+    "url": "<?= $block->escapeUrl($block->getAjaxUrl()) ?>",
+    "elementId": "<?= $block->getHtmlId() ?>",
+    "failedText": "<?= $block->escapeHtmlAttr(__('Connection failed! Test again?')) ?>",
+    "fieldMapping": "<?= /* @noEscape */ $block->getFieldMapping() ?>"}, "validation": {}}'>
+    <span id="<?= $block->getHtmlId() ?>"><?= $block->escapeHtml($block->getButtonLabel()) ?></span>
+</button>
+<span style="background: #fffbbb; float: left;"><pre id="<?= $block->getHtmlId() ?>_result" /></span>
