@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--
+ /**
+ * @category  Syncit Group Elastic Search Indexer
+ * @package   SyncitGroup_Indexer
+ * @copyright Copyright (c) 2021 Bhavin
+ * @author    Bhavin
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="SyncitGroup_Indexer" setup_version="2.0.0">
+    	<sequence>
+            <module name="Magento_Elasticsearch"/>
+        </sequence>
+    </module>
+</config>
